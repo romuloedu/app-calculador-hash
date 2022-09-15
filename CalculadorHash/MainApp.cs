@@ -21,7 +21,7 @@ namespace CalculadorHash
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnPesquisarArquivo_Click(object sender, EventArgs e)
@@ -30,13 +30,29 @@ namespace CalculadorHash
 
             if (dialogResult == DialogResult.OK)
             {
-                XDocument xDoc = XDocument.Load(openFileDialog1.FileName);
+                ICalculadorHash calculador = GerarCalculadorHash(openFileDialog1.FileName);
 
-                ICalculadorHash calculadorHash = new SibService();
+                if (calculador == null) MessageBox.Show("O arquivo não é suportado!");
 
-                String hash = calculadorHash.CalcularHash(xDoc.ToString());
+                string novoHash = calculador.CalcularHash(openFileDialog1.FileName);
 
-                txtHashCalculado.Text = hash;
+                txtHashCalculado.Text = novoHash;
+            }
+        }
+
+        private ICalculadorHash GerarCalculadorHash(string arquivo)
+        {
+            if (arquivo.EndsWith("xsip"))
+            {
+                return new SipService();
+            }
+            else if (arquivo.EndsWith("sbx"))
+            {
+                return new SibService();
+            }
+            else
+            {
+                return null;
             }
         }
     }
