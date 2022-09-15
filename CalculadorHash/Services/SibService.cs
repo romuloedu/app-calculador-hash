@@ -8,6 +8,7 @@ namespace CalculadorHash.Services
 {
     public class SibService : ICalculadorHash
     {
+        /// Repo de apoio: https://github.com/marcostomazini/GerarHashSib
         public string CalcularHash(string xmlContent)
         {
             StringBuilder sb = new StringBuilder();

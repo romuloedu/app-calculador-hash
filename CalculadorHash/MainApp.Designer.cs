@@ -32,6 +32,7 @@ namespace CalculadorHash
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtHashCalculado = new System.Windows.Forms.TextBox();
             this.btnPesquisarArquivo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -41,14 +42,14 @@ namespace CalculadorHash
             // 
             // txtHashCalculado
             // 
-            this.txtHashCalculado.Location = new System.Drawing.Point(12, 12);
+            this.txtHashCalculado.Location = new System.Drawing.Point(103, 12);
             this.txtHashCalculado.Name = "txtHashCalculado";
-            this.txtHashCalculado.Size = new System.Drawing.Size(762, 20);
+            this.txtHashCalculado.Size = new System.Drawing.Size(511, 20);
             this.txtHashCalculado.TabIndex = 0;
             // 
             // btnPesquisarArquivo
             // 
-            this.btnPesquisarArquivo.Location = new System.Drawing.Point(624, 415);
+            this.btnPesquisarArquivo.Location = new System.Drawing.Point(620, 10);
             this.btnPesquisarArquivo.Name = "btnPesquisarArquivo";
             this.btnPesquisarArquivo.Size = new System.Drawing.Size(150, 23);
             this.btnPesquisarArquivo.TabIndex = 1;
@@ -56,15 +57,25 @@ namespace CalculadorHash
             this.btnPesquisarArquivo.UseVisualStyleBackColor = true;
             this.btnPesquisarArquivo.Click += new System.EventHandler(this.btnPesquisarArquivo_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Hash Calculado:";
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(782, 50);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPesquisarArquivo);
             this.Controls.Add(this.txtHashCalculado);
             this.Name = "MainApp";
-            this.Text = "Form1";
+            this.Text = "Calculador de Hash";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -76,6 +87,7 @@ namespace CalculadorHash
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtHashCalculado;
         private System.Windows.Forms.Button btnPesquisarArquivo;
+        private System.Windows.Forms.Label label1;
     }
 }
 
