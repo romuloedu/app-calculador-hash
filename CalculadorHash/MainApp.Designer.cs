@@ -37,19 +37,18 @@ namespace CalculadorHash
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Arquivo SIB|*.sbx";
+            this.openFileDialog1.Filter = "Arquivo SIB|*.sbx|Arquivo SIP|*.xsip";
             // 
             // txtHashCalculado
             // 
             this.txtHashCalculado.Location = new System.Drawing.Point(103, 12);
             this.txtHashCalculado.Name = "txtHashCalculado";
-            this.txtHashCalculado.Size = new System.Drawing.Size(511, 20);
+            this.txtHashCalculado.Size = new System.Drawing.Size(346, 20);
             this.txtHashCalculado.TabIndex = 0;
             // 
             // btnPesquisarArquivo
             // 
-            this.btnPesquisarArquivo.Location = new System.Drawing.Point(620, 10);
+            this.btnPesquisarArquivo.Location = new System.Drawing.Point(455, 10);
             this.btnPesquisarArquivo.Name = "btnPesquisarArquivo";
             this.btnPesquisarArquivo.Size = new System.Drawing.Size(150, 23);
             this.btnPesquisarArquivo.TabIndex = 1;
@@ -70,14 +69,15 @@ namespace CalculadorHash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 50);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(617, 50);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPesquisarArquivo);
             this.Controls.Add(this.txtHashCalculado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainApp";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculador de Hash";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
