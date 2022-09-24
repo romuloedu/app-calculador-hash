@@ -31,7 +31,7 @@ namespace CalculadorHash
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtHashCalculado = new System.Windows.Forms.TextBox();
-            this.btnPesquisarArquivo = new System.Windows.Forms.Button();
+            this.BtnPesquisarArquivo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -46,15 +46,15 @@ namespace CalculadorHash
             this.txtHashCalculado.Size = new System.Drawing.Size(346, 20);
             this.txtHashCalculado.TabIndex = 0;
             // 
-            // btnPesquisarArquivo
+            // BtnPesquisarArquivo
             // 
-            this.btnPesquisarArquivo.Location = new System.Drawing.Point(455, 10);
-            this.btnPesquisarArquivo.Name = "btnPesquisarArquivo";
-            this.btnPesquisarArquivo.Size = new System.Drawing.Size(150, 23);
-            this.btnPesquisarArquivo.TabIndex = 1;
-            this.btnPesquisarArquivo.Text = "Pesquisar Arquivo";
-            this.btnPesquisarArquivo.UseVisualStyleBackColor = true;
-            this.btnPesquisarArquivo.Click += new System.EventHandler(this.btnPesquisarArquivo_Click);
+            this.BtnPesquisarArquivo.Location = new System.Drawing.Point(455, 10);
+            this.BtnPesquisarArquivo.Name = "BtnPesquisarArquivo";
+            this.BtnPesquisarArquivo.Size = new System.Drawing.Size(150, 23);
+            this.BtnPesquisarArquivo.TabIndex = 1;
+            this.BtnPesquisarArquivo.Text = "Pesquisar Arquivo";
+            this.BtnPesquisarArquivo.UseVisualStyleBackColor = true;
+            this.BtnPesquisarArquivo.Click += new System.EventHandler(this.BtnPesquisarArquivo_Click);
             // 
             // label1
             // 
@@ -71,7 +71,7 @@ namespace CalculadorHash
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 50);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnPesquisarArquivo);
+            this.Controls.Add(this.BtnPesquisarArquivo);
             this.Controls.Add(this.txtHashCalculado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -79,7 +79,6 @@ namespace CalculadorHash
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculador de Hash";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,7 +88,7 @@ namespace CalculadorHash
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtHashCalculado;
-        private System.Windows.Forms.Button btnPesquisarArquivo;
+        private System.Windows.Forms.Button BtnPesquisarArquivo;
         private System.Windows.Forms.Label label1;
     }
 }

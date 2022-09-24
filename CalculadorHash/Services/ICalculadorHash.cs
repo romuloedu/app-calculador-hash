@@ -2,6 +2,6 @@
 {
     public interface ICalculadorHash
     {
-        string CalcularHash(string xmlContent);
+        string CalcularHash(string arquivo);
     }
 }
