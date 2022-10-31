@@ -1,0 +1,33 @@
+@startuml Calculador de Hashes
+
+namespace Services {
+
+    interface ICalculadorHash {
+        + string CalcularHash(string arquivo);
+    }
+
+    class SibService {
+        + string CalcularHash(string arquivo);
+    }
+
+    class SipService {
+        + string CalcularHash(string arquivo);
+    }
+
+    ICalculadorHash <|-- SibService
+    ICalculadorHash <|-- SipService
+
+    class CalcularHashFactory {
+       {static} + ICalculadorHash CriarInstancia(string arquivo) 
+    }
+}
+
+namespace Utils {
+
+    class MD5CryptoHash {
+        + string ComputeHash(string xmlContent);
+    }
+
+}
+
+@enduml
