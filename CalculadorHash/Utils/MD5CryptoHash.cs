@@ -7,12 +7,11 @@ namespace CalculadorHash.Utils
     {
         public static string ComputeHash(string xmlContent)
         {
-            using var md5 = MD5.Create();
 
             byte[] byteArray = Encoding.GetEncoding("ISO-8859-1").GetBytes(xmlContent);
-            byte[] hash = md5.ComputeHash(byteArray);
+            byte[] hash = MD5.HashData(byteArray);
 
-            StringBuilder hashString = new StringBuilder();
+            StringBuilder hashString = new();
 
             foreach (byte i in hash)
             {

@@ -16,6 +16,10 @@ namespace CalculadorHash.Services
             {
                 return new SibService();
             }
+            else if (arquivo.EndsWith("174"))
+            {
+                return new PtuService();
+            }
             else
             {
                 return null;

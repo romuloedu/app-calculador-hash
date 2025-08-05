@@ -1,8 +1,5 @@
 ﻿using CalculadorHash.Utils;
-using System;
-using System.IO;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -30,7 +27,7 @@ namespace CalculadorHash.Services
             return MD5CryptoHash.ComputeHash(xmlHigienizado);
         }
 
-        private string RemoverElementosDesnecessarios(string arquivo)
+        private static string RemoverElementosDesnecessarios(string arquivo)
         {
             XDocument xDoc = XDocument.Load(new StreamReader(arquivo, Encoding.GetEncoding("ISO-8859-1")));
 

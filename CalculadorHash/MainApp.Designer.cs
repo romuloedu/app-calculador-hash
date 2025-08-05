@@ -37,7 +37,7 @@ namespace CalculadorHash
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.Filter = "Arquivo SIB|*.sbx|Arquivo SIP|*.xsip";
+            this.openFileDialog1.Filter = "Arquivo PTU|*.174|Arquivo SIB|*.sbx|Arquivo SIP|*.xsip";
             // 
             // txtHashCalculado
             // 
