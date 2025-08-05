@@ -35,7 +35,7 @@ namespace CalculadorHash.Services
             XDocument xDoc = XDocument.Load(new StreamReader(arquivo, Encoding.GetEncoding("ISO-8859-1")));
 
             // Remove o epílogo
-            xDoc.Root.Element("epilogo").Remove();
+            xDoc.Root?.Element("epilogo")?.Remove();
 
             return xDoc.ToString();
         }

@@ -3,11 +3,11 @@ using System.Text;
 
 namespace CalculadorHash.Utils
 {
-    public class MD5CryptoHash
+    public static class MD5CryptoHash
     {
         public static string ComputeHash(string xmlContent)
         {
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            using var md5 = MD5.Create();
 
             byte[] byteArray = Encoding.GetEncoding("ISO-8859-1").GetBytes(xmlContent);
             byte[] hash = md5.ComputeHash(byteArray);

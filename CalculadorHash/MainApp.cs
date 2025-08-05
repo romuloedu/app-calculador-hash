@@ -1,14 +1,6 @@
 ﻿using CalculadorHash.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace CalculadorHash
 {
@@ -25,9 +17,13 @@ namespace CalculadorHash
 
             if (dialogResult == DialogResult.OK)
             {
-                ICalculadorHash calculador = CalculadorHashFactory.CriarInstancia(openFileDialog1.FileName);
+                ICalculadorHash? calculador = CalculadorHashFactory.CriarInstancia(openFileDialog1.FileName);
 
-                if (calculador == null) MessageBox.Show("O arquivo não é suportado!");
+                if (calculador == null)
+                {
+                    MessageBox.Show("O arquivo não é suportado!");
+                    return;
+                }
 
                 string novoHash = calculador.CalcularHash(openFileDialog1.FileName);
 

@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculadorHash.Services
 {
-    public class CalculadorHashFactory
+    public static class CalculadorHashFactory
     {
-        public static ICalculadorHash CriarInstancia(string arquivo)
+        public static ICalculadorHash? CriarInstancia(string arquivo)
         {
             arquivo = arquivo.ToLower();
 
